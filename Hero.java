@@ -18,6 +18,9 @@ public class Hero extends Actor
     
     public void act()
     {
-        move(10);
+        for (int i=0; i < 4; i++){
+            move(10);
+            turn(5);
+        }
     }
 }
