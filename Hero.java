@@ -2,9 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class hero here.
+ *
  * 
  * Lucian Bai
- * April 14
+ * April 14 - v1
  */
 public class Hero extends Actor
 {
@@ -13,7 +14,9 @@ public class Hero extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Hero(){
-        
+        GreenfootImage heroImage = new GreenfootImage("spiderman.jpg");
+        heroImage.scale(50, 50);
+        setImage(heroImage);
     }
     
     public void act()
