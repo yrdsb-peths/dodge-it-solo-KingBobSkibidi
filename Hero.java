@@ -24,7 +24,7 @@ public class Hero extends Actor
         move(50);
         int w = getWorld().getWidth();
         int h = getWorld().getHeight();
-    
+        
         if (getRotation() == 0 && getX() >= w - 50) {
             setRotation(90);
         }
