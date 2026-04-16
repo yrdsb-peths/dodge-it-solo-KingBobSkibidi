@@ -6,7 +6,7 @@ public class MyWorld extends World {
         
         Hero h = new Hero();
         Villain v = new Villain();
-        addObject(h, 50, 50);
-        addObject(v, getWidth()/2, 50);
+        addObject(h, 100, 100);
+        addObject(v, 450, 100);
     }
 }

@@ -20,24 +20,24 @@ public class Villain extends Actor
     
     public void act()
     {
-        move(40);
-        int w = getWorld().getWidth();
-        int h = getWorld().getHeight();
-        
-        if (getX() >= w - 70 && getY() <= 50) {
-            setRotation(90);
+        move(-5);
+        if (getX() <= 50) {
+            resetVillain();
         }
         
-        else if (getX() >= w - 70 && getY() >= h - 70){
-            setRotation(180);
+        if (isTouching(Hero.class)) {
+            getWorld().addObject(new Defeated(), 300, 200);
+            getWorld().removeObject(this);
         }
-        
-        else if (getX() <= 70 && getY() >= h - 70){
-            setRotation(270);
+    }
+    
+    public void resetVillain() {
+        int random = Greenfoot.getRandomNumber(2);
+        if (random == 0) {
+            setLocation(600, 100);
         }
-        
-        else if (getX() <= 70 && getY() <= 50){
-            setRotation(0);
+        else {
+            setLocation(600, 300);
         }
     }
 }

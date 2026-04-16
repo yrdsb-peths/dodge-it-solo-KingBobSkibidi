@@ -19,26 +19,19 @@ public class Hero extends Actor
         setImage(heroImage);
     }
     
+    boolean isAtTop = true;
+    
     public void act()
     {
-        move(50);
-        int w = getWorld().getWidth();
-        int h = getWorld().getHeight();
-        
-        if (getRotation() == 0 && getX() >= w - 50) {
-            setRotation(90);
-        }
-        
-        else if (getRotation() == 90 && getY() >= h - 50){
-            setRotation(180);
-        }
-        
-        else if (getRotation() == 180 && getX() <= 50){
-            setRotation(270);
-        }
-        
-        else if (getRotation() == 270 && getY() <= 50){
-            setRotation(0);
+        if(Greenfoot.mouseClicked(null)){
+            if(isAtTop == false) {
+                setLocation(100, 100);
+                isAtTop = true;
+            }
+            else{
+                setLocation(100, 300);
+                isAtTop = false;
+            }
         }
     }
 }
