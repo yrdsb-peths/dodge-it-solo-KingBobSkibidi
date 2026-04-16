@@ -24,19 +24,19 @@ public class Villain extends Actor
         int w = getWorld().getWidth();
         int h = getWorld().getHeight();
         
-        if (getX() >= w - 50 && getY() <= 50) {
+        if (getX() >= w - 70 && getY() <= 50) {
             setRotation(90);
         }
         
-        else if (getX() >= w - 50 && getY() >= h - 50){
+        else if (getX() >= w - 70 && getY() >= h - 70){
             setRotation(180);
         }
         
-        else if (getX() <= 50 && getY() >= h - 50){
+        else if (getX() <= 70 && getY() >= h - 70){
             setRotation(270);
         }
         
-        else if (getX() <= 50 && getY() <= 50){
+        else if (getX() <= 70 && getY() <= 50){
             setRotation(0);
         }
     }
