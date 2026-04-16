@@ -21,9 +21,24 @@ public class Hero extends Actor
     
     public void act()
     {
-        for (int i=0; i < 4; i++){
-            move(10);
-            turn(5);
+        move(50);
+        int w = getWorld().getWidth();
+        int h = getWorld().getHeight();
+    
+        if (getRotation() == 0 && getX() >= w - 50) {
+            setRotation(90);
+        }
+        
+        else if (getRotation() == 90 && getY() >= h - 50){
+            setRotation(180);
+        }
+        
+        else if (getRotation() == 180 && getX() <= 50){
+            setRotation(270);
+        }
+        
+        else if (getRotation() == 270 && getY() <= 50){
+            setRotation(0);
         }
     }
 }
