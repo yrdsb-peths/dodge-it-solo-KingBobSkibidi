@@ -17,5 +17,4 @@ public class Defeated extends Actor
         defeatedImage.scale(200, 200);
         setImage(defeatedImage);
     }
-    
 }
